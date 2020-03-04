@@ -14,7 +14,7 @@ function bs () {
   });
 
   watch("./src/*.html").on("change", browserSync.reload);
-  watch("./src/scss/**/*.scss").on("change", serveSass);
+  watch("./src/scss/**/*.scss", serveSass);
   watch("./src/js/*.js").on("change", browserSync.reload);
 };
 
