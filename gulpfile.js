@@ -27,7 +27,7 @@ function minifyCss () {
 }
 
 function serveSass () {
-  return src("./src/scss/*.scss")
+  return src("./src/scss/**/*.scss")
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
