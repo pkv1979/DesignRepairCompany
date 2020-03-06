@@ -1,5 +1,8 @@
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 100px;
   height: 100vh;
   background: $dark url('../img/hero-bg.jpg') no-repeat center / cover;
@@ -14,11 +17,34 @@
     font-family: 'Futura Demi', sans-serif
   }
 
-  &__title {
+  &__scroll-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: $dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $light;
+    font-family: 'Yeseva One', cursive;
+    font-size: 12px;
+  }
 
-    &--gold {
-      color: $primary;
-    }
+  &__content {
+    max-width: 670px;
+  }
+
+  &__text {
+    max-width: 500px;
+    font-size: 22px;
+  }
+
+  &__btn {
+    margin-right: 20px;
   }
 }
 
@@ -38,4 +64,12 @@
 
 .title {
   margin: 0;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: normal;
+
+  &--primary {
+    color: $primary;
+  }
 }
