@@ -26,7 +26,8 @@
     text-decoration: none;
     color: $light;
     text-transform: uppercase;
-    &--selected {
+    transition: color 0.2s;
+    &:hover {
       color: $primary;
     }
   }
