@@ -356,6 +356,9 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
+img {
+  max-width: 100%; }
+
 .section-title {
   text-align: center;
   text-transform: uppercase;
@@ -440,7 +443,7 @@ body {
     left: 0;
     bottom: 0;
     min-width: 17.6rem;
-    min-height: 6.92rem;
+    min-height: 5rem;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
@@ -502,6 +505,14 @@ body {
   line-height: 1.3; }
   .title--primary {
     color: #E3B873; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
 
 @media screen and (max-width: 1200px) {
   html {
