@@ -449,7 +449,7 @@ body {
     font-size: 12px; }
     .hero__scroll-down::after {
       content: '';
-      margin-left: 12px;
+      margin-left: 19px;
       width: 30px;
       height: 30px;
       background: url("../img/arow-down.svg") no-repeat center;
@@ -466,8 +466,10 @@ body {
     font-size: 1.57rem;
     line-height: 141%; }
   .hero__btn {
-    margin-right: 18px;
-    padding: 18px 25px; }
+    margin-right: 16px;
+    padding: 18px 27px; }
+    .hero__btn--outline {
+      padding: 18px 43px; }
 
 .instagram {
   display: flex;

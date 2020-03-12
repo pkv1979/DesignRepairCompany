@@ -45,7 +45,7 @@
 
     &::after {
       content: '';
-      margin-left: 12px;
+      margin-left: 19px;
       width: 30px;
       height: 30px;
       background: url('../img/arow-down.svg') no-repeat center;
@@ -69,8 +69,12 @@
   }
 
   &__btn {
-    margin-right: 18px;
-    padding: 18px 25px;
+    margin-right: 16px;
+    padding: 18px 27px;
+
+    &--outline {
+      padding: 18px 43px;
+    }
   }
 }
 
