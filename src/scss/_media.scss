@@ -43,6 +43,19 @@
       margin-left: 0;
     }
   }
+
+  .design {
+    background-color: $bacground;
+    color: $light;
+
+    &__subtitle {
+      color: $light;
+    }
+
+    &__card {
+      margin-bottom: 5rem;
+    }
+  }
 }
 
 @media screen and (max-width: 570px) {

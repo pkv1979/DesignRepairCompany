@@ -364,8 +364,9 @@ img {
   .section-title {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.42rem; }
+    font-family: 'Yeseva One', cursive; }
+    .section-title__heading {
+      font-size: 1.42rem; }
     .section-title__img {
       display: flex;
       justify-content: center;
@@ -554,6 +555,15 @@ img {
   background-color: #E3B873;
   color: #ffffff; }
 
+.design__section-title {
+  margin-bottom: 1.71rem; }
+
+.design__subtitle {
+  margin-bottom: 2.86rem;
+  font-size: 1.42rem;
+  text-align: center;
+  color: #363636; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 10px; }
@@ -575,7 +585,14 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .design {
+    background-color: #252525;
+    color: #ffffff; }
+    .design__subtitle {
+      color: #ffffff; }
+    .design__card {
+      margin-bottom: 5rem; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
