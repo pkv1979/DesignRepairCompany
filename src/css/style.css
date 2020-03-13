@@ -359,21 +359,23 @@ body {
 img {
   max-width: 100%; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive;
-  font-size: 20px; }
-  .section-title__img {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__img::after, .section-title__img::before {
-      content: '';
-      margin: 0 10px;
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873; }
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.42rem; }
+    .section-title__img {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__img::after, .section-title__img::before {
+        content: '';
+        margin: 0 10px;
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873; }
 
 .header {
   position: fixed;
@@ -506,6 +508,9 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.types__section-title {
+  margin-bottom: 2rem; }
+
 .row {
   display: flex;
   align-items: flex-start;
@@ -513,6 +518,41 @@ img {
 
 .col {
   flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9.3rem;
+  padding: 1.79rem 2.14rem;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-family: Yeseva, cursive;
+  font-size: 1.28rem; }
+
+.card__list {
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  font-size: 1.07rem;
+  line-height: 1.79rem;
+  color: #959595; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.79rem;
+  padding: 1.214rem 2.6rem;
+  font-family: Yeseva, cursive;
+  font-size: 1.29rem;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -526,6 +566,15 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
+    margin-left: 0; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .card__text {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
