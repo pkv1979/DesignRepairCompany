@@ -446,13 +446,13 @@ img {
     left: 0;
     bottom: 0;
     min-width: 17.6rem;
-    min-height: 5rem;
+    min-height: 6.92rem;
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
     font-family: 'Yeseva One', cursive;
-    font-size: 12px; }
+    font-size: 0.86rem; }
     .hero__scroll-down::after {
       content: '';
       margin-left: 19px;
@@ -556,11 +556,14 @@ img {
   color: #ffffff; }
 
 .design__section-title {
-  margin-bottom: 1.71rem; }
+  margin-bottom: 1.2rem; }
 
 .design__subtitle {
+  margin: 0 auto;
   margin-bottom: 2.86rem;
+  max-width: 52.93rem;
   font-size: 1.42rem;
+  line-height: 1.93rem;
   text-align: center;
   color: #363636; }
 

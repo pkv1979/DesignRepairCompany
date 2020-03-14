@@ -1,10 +1,14 @@
 .design {
+
   &__section-title {
-    margin-bottom: 1.71rem;
+    margin-bottom: 1.2rem;
   }
   &__subtitle {
+    margin: 0 auto;
     margin-bottom: 2.86rem;
+    max-width: 52.93rem;
     font-size: 1.42rem;
+    line-height: 1.93rem;
     text-align: center;
     color: $subtitle;
   }
