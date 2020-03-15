@@ -15,9 +15,9 @@
   &__dialog {
     position: relative;
     max-width: 36.1rem;
-    padding: 2.36rem 3.5rem 1.928rem;
+    padding: 2.3rem 3.5rem 1.928rem;
     color: $light;
-    background: $dark;
+    background: $dark url('../img/bg-lines.svg') no-repeat center;
   }
 
   &__close {
@@ -33,7 +33,7 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 2.428rem;
+    margin-bottom: 2rem;
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
     line-height: 1.86rem;
@@ -46,10 +46,19 @@
   }
 
   &__input {
-    margin-bottom: 3.482rem;
+    margin-bottom: 3.4rem;
 
     &:last-of-type {
-      margin-bottom: 1rem;
+      margin-bottom: 0;
     }
+  }
+
+  &__policy {
+    margin-bottom: 2.7rem;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    padding: 19px 47px;
   }
 }

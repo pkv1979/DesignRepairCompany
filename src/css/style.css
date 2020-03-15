@@ -345,7 +345,7 @@ template {
     color: rgba(255, 255, 255, 0.5); }
 
 .input {
-  padding: 0.5rem 0;
+  padding: 0.2rem 0 0.7rem;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   background-color: transparent;
@@ -365,6 +365,21 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
+  .policy__checkbox:checked + .policy__label:before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  font-size: 1.14rem; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    margin-right: 0.64rem;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer; }
 
 .container {
   width: 90%;
@@ -610,9 +625,9 @@ img {
   .modal__dialog {
     position: relative;
     max-width: 36.1rem;
-    padding: 2.36rem 3.5rem 1.928rem;
+    padding: 2.3rem 3.5rem 1.928rem;
     color: #ffffff;
-    background: #131313; }
+    background: #131313 url("../img/bg-lines.svg") no-repeat center; }
   .modal__close {
     position: absolute;
     right: 0.86rem;
@@ -624,7 +639,7 @@ img {
     cursor: pointer; }
   .modal__title {
     margin: 0;
-    margin-bottom: 2.428rem;
+    margin-bottom: 2rem;
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
     line-height: 1.86rem;
@@ -633,9 +648,14 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.482rem; }
+    margin-bottom: 3.4rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+      margin-bottom: 0; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__btn {
+    align-self: flex-end;
+    padding: 19px 47px; }
 
 @media screen and (max-width: 1200px) {
   html {
