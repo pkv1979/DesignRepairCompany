@@ -60,4 +60,26 @@ $(document).ready(() => {
       modal.removeClass('modal--visible');
     }
   });
+
+  // Скрипт для кнопик "Наверх"
+  const topShow = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  const delay = 1000; // Задержка прокрутки
+  const topBtn = $('.top');
+
+  $(window).on('scroll', () => { // При прокрутке попадаем в эту функцию
+    /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+    if ($(this).scrollTop() > topShow) {
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+  });
+
+  topBtn.on('click', () => { // При клике по кнопке "Наверх" попадаем в эту функцию
+    /* Плавная прокрутка наверх */
+    $('body, html').animate({
+      scrollTop: 0
+    }, delay);
+  });
+
 });

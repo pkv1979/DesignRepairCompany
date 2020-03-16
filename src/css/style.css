@@ -381,6 +381,15 @@ template {
     border-radius: 1px;
     cursor: pointer; }
 
+.top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+  color: #E3B873;
+  font-size: 150%;
+  cursor: pointer; }
+
 .container {
   width: 90%;
   max-width: 1272px;
