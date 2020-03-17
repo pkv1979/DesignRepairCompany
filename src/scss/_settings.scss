@@ -36,6 +36,8 @@ img {
     }
 
     &__heading {
+      margin: 0;
+      margin-bottom: 1.64rem;
       font-size: 1.42rem;
 
       &--primary {
@@ -60,11 +62,18 @@ img {
     }
 
     &__text {
+      margin: 0;
       max-width: 31.57rem;
-      font-family: 'Futura Book', sans-serif;;
+      font-family: 'Futura Book', sans-serif;
       font-size: 1.28rem;
       line-height: 2.07rem;
       text-transform: none;
+    }
+
+    &__subtitle {
+      font-family: 'Futura Book', sans-serif;
+      font-size: 1.07rem;
+      font-weight: 500;
     }
     
     &__img {

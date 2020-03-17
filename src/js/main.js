@@ -103,5 +103,5 @@ $(document).ready(() => {
   const bullets = $('.swiper-pagination');
 
   bullets.css('left', prev.width() + 30);
-  next.css('left', prev.width() + 30 + bullets.width() + 30);
+  next.css('left', prev.width() + 30 + bullets.width() + 12);
 });

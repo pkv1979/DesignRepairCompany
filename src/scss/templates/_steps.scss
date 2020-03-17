@@ -1,0 +1,13 @@
+.steps {
+  padding-top: 0;
+  
+  &__heading {
+    letter-spacing: 0; 
+  }
+
+  &__word {
+    &::after {
+      margin-left: 6.21rem;
+    }
+  }
+}

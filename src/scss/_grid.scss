@@ -1,6 +1,6 @@
 .container {
   width: 90%;
-  max-width: 1272px;
+  max-width: 1237px;
   margin: auto;
 }
 
@@ -13,9 +13,18 @@
 .col {
   &-30 {
     flex-basis: 30%;
+    z-index: 3;
+  }
+
+  &-45 {
+    width: 45%;
   }
 
   &-50 {
     width: 50%;
+  }
+
+  &-55 {
+    width: 55%;
   }
 }
