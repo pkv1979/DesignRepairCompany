@@ -20,13 +20,51 @@ img {
 .section {
   padding: 60px 0;
 
+  &--dark {
+    background-color: $dark;
+    color: $light;
+  }
+
   &-title {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
 
+    &--left {
+      text-align: left;
+      margin-bottom: 3.5rem;
+    }
+
     &__heading {
       font-size: 1.42rem;
+
+      &--primary {
+        color: $primary;
+        font-size: 1.93rem;
+        line-height: 2.64rem;
+        letter-spacing: -0.15rem;
+      }
+    }
+
+    &__word {
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: '';
+        width: 92px;
+        height: 2px;
+        margin-left: 2.57rem;
+        background-color: $primary;
+      }
+    }
+
+    &__text {
+      max-width: 31.57rem;
+      font-family: 'Futura Book', sans-serif;;
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      text-transform: none;
     }
     
     &__img {

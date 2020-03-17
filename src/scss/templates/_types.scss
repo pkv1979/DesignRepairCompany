@@ -4,16 +4,6 @@
   }
 }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.col {
-  flex-basis: 32%;
-}
-
 .card {
   &__text {
     position: relative;
@@ -47,7 +37,7 @@
     left: 0;
     bottom: -1.79rem;
     padding: 1.214rem 2.6rem;
-    font-family: Yeseva, cursive;
+    font-family: 'Yeseva One', cursive;
     font-size: 1.29rem;
     text-transform: uppercase;
     background-color: $primary;

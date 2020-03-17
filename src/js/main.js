@@ -85,4 +85,23 @@ $(document).ready(() => {
     }, delay);
   });
 
+  //initialize swiper when document ready
+  const mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+  });
+
+  const next = $('.swiper-button-next');
+  const prev = $('.swiper-button-prev');
+  const bullets = $('.swiper-pagination');
+
+  bullets.css('left', prev.width() + 30);
+  next.css('left', prev.width() + 30 + bullets.width() + 30);
 });
