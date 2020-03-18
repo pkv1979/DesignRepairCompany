@@ -12,7 +12,8 @@
 
 .col {
   &-30 {
-    flex-basis: 30%;
+    // flex-basis: 30%;
+    width: 30%;
     z-index: 3;
   }
 
@@ -26,5 +27,9 @@
 
   &-55 {
     width: 55%;
+  }
+
+  &-70 {
+    width: 70%;
   }
 }

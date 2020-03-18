@@ -86,22 +86,43 @@ $(document).ready(() => {
   });
 
   //initialize swiper when document ready
-  const mySwiper = new Swiper ('.swiper-container', {
+  const projectsSwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.projects__swiper-button-next',
+      prevEl: '.projects__swiper-button-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects__swiper-pagination',
       type: 'bullets',
     },
   });
 
-  const next = $('.swiper-button-next');
-  const prev = $('.swiper-button-prev');
-  const bullets = $('.swiper-pagination');
+  const projectsNext = $('.projects__swiper-button-next');
+  const projectsPrev = $('.projects__swiper-button-prev');
+  const projectsBullets = $('.projects__swiper-pagination');
 
-  bullets.css('left', prev.width() + 30);
-  next.css('left', prev.width() + 30 + bullets.width() + 12);
+  projectsBullets.css('left', projectsPrev.width() + 30);
+
+  projectsNext.css('left', projectsPrev.width() + 30 + projectsBullets.width() + 12);
+
+  const stepsSwiper = new Swiper ('.steps__swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.steps__swiper-button-next',
+      prevEl: '.steps__swiper-button-prev',
+    },
+    pagination: {
+      el: '.steps__swiper-pagination',
+      type: 'bullets',
+    },
+  });
+
+  const stepsNext = $('.steps__swiper-button-next');
+  const stepsPrev = $('.steps__swiper-button-prev');
+  const stepsBullets = $('.steps__swiper-pagination');
+
+  stepsBullets.css('left', stepsPrev.width() + 30);
+
+  stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 12);
 });
