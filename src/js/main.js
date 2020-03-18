@@ -95,7 +95,7 @@ $(document).ready(() => {
     pagination: {
       el: '.projects__swiper-pagination',
       type: 'bullets',
-    },
+    }
   });
 
   const projectsNext = $('.projects__swiper-button-next');
@@ -105,6 +105,8 @@ $(document).ready(() => {
   projectsBullets.css('left', projectsPrev.width() + 30);
 
   projectsNext.css('left', projectsPrev.width() + 30 + projectsBullets.width() + 12);
+
+  const counter = $('.steps__counter');
 
   const stepsSwiper = new Swiper ('.steps__swiper-container', {
     loop: true,
@@ -116,6 +118,12 @@ $(document).ready(() => {
       el: '.steps__swiper-pagination',
       type: 'bullets',
     },
+
+    on: {
+      slideChange: () => {
+        counter.text(stepsSwiper.realIndex + 1 + '/6');
+      }
+    }
   });
 
   const stepsNext = $('.steps__swiper-button-next');

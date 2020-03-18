@@ -2,6 +2,7 @@
   padding-top: 0;
   
   &__heading {
+    margin-bottom: 6.57rem;
     letter-spacing: 0; 
   }
 
@@ -9,5 +10,11 @@
     &::after {
       margin-left: 6.21rem;
     }
+  }
+
+  &__counter {
+    margin-bottom: 1.5rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.2rem;
   }
 }
