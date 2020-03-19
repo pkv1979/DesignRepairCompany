@@ -1,0 +1,63 @@
+.footer {
+  padding-top: 3rem;
+  background: $dark url('../img/footer-bg.jpg') no-repeat center / cover;
+
+  &__wrap {
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem;
+    max-width: 63.07rem;
+    background-color: $black;
+  }
+
+  &__title {
+    margin-bottom: 3.43rem;
+    margin-top: 0;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 37.142rem;
+  }
+
+  &__input {
+    padding-top: 0.1rem;
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.1rem;
+
+      &--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.64rem;
+  }
+
+  &__btn {
+    margin: auto;
+    padding: 1.21rem 4.21rem;
+    font-size: 1.07rem;
+  }
+
+  &__menu {
+    padding: 4.29rem 0;
+    background-color: $dark;
+  }
+}
