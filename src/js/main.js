@@ -103,7 +103,6 @@ $(document).ready(() => {
   const projectsBullets = $('.projects__swiper-pagination');
 
   projectsBullets.css('left', projectsPrev.width() + 30);
-
   projectsNext.css('left', projectsPrev.width() + 30 + projectsBullets.width() + 12);
 
   const counter = $('.steps__counter');
@@ -131,6 +130,7 @@ $(document).ready(() => {
   const stepsBullets = $('.steps__swiper-pagination');
 
   stepsBullets.css('left', stepsPrev.width() + 30);
-
   stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 12);
+
+  new WOW().init();
 });
