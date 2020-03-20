@@ -395,7 +395,7 @@ template {
   font-size: 150%;
   cursor: pointer; }
 
-label.invalid {
+div.invalid {
   color: tomato; }
 
 .container {
