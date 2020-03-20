@@ -350,7 +350,8 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   background-color: transparent;
   font-size: 1.285rem;
-  color: #ffffff; }
+  color: #ffffff;
+  outline: none; }
   .input--light::-webkit-input-placeholder {
     color: #ffffff; }
   .input--light::-moz-placeholder {
@@ -361,6 +362,8 @@ template {
     color: #ffffff; }
   .input--light::placeholder {
     color: #ffffff; }
+  .input.invalid {
+    border-bottom: 1px solid tomato; }
 
 .policy__checkbox {
   opacity: 0;
@@ -391,6 +394,9 @@ template {
   color: #E3B873;
   font-size: 150%;
   cursor: pointer; }
+
+label.invalid {
+  color: tomato; }
 
 .container {
   width: 90%;
@@ -729,10 +735,12 @@ img {
   margin: auto;
   max-width: 55rem; }
 
-.control__input-group {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 30%; }
+.control__input {
+  color: #131313; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
 
 .control__label {
   margin-bottom: -7px; }
@@ -914,9 +922,11 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.4rem; }
-    .modal__input:last-of-type {
+    .modal__input-group:last-of-type {
       margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.7rem; }

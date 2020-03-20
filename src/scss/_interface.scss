@@ -43,11 +43,16 @@
   background-color: transparent;
   font-size: 1.285rem;
   color: $light;
+  outline: none;
 
   &--light {
     &::placeholder {
       color: $light;
     }
+  }
+
+  &.invalid {
+    border-bottom: 1px solid tomato;
   }
 }
 
@@ -92,4 +97,10 @@
   color: $primary;
   font-size: 150%;
   cursor: pointer;
+}
+
+label {
+  &.invalid {
+    color: tomato;
+  }
 }

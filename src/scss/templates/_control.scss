@@ -51,10 +51,13 @@
     max-width: 55rem;
   }
 
-  &__input-group {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 30%;
+  &__input {
+    color: $dark;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+    }
   }
 
   &__label {

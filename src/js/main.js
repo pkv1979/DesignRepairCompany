@@ -133,4 +133,81 @@ $(document).ready(() => {
   stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 12);
 
   new WOW().init();
+
+  // Валидация формы
+  $('.control__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minLength: 2
+      },
+      userPhone: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minLength: "Длина поля должна быть не менее 2 символов"
+      },
+      userPhone: "Заполните поле"
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  $('.footer__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minLength: 2
+      },
+      userPhone: "required",
+      userQuestion: {
+        required: true,
+        minLength: 10
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minLength: "Длина поля должна быть не менее 2 символов"
+      },
+      userPhone: "Заполните поле",
+      userQuestion: {
+        required: "Заполните поле",
+        minLength: "Длина поля должна быть не менее 10 символов"
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  $('.modal__form').validate({
+    rules: {
+      userName: {
+        required: true,
+        minLength: 2
+      },
+      userPhone: "required",
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minLength: "Длина поля должна быть не менее 2 символов"
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  // Маска для номера телефона
+  $('[type=tel]').mask('+7(000) 00-00-000', /*{ placeholder: "+7(___) __-__-___" }*/);
 });
