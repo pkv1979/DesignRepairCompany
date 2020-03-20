@@ -840,7 +840,7 @@ img {
   .footer__wrap {
     margin: auto;
     margin-top: -20rem;
-    margin-bottom: 3.714rem;
+    margin-bottom: 3.57rem;
     padding: 2.5rem;
     max-width: 63.07rem;
     background-color: #181818; }
@@ -875,8 +875,34 @@ img {
     margin: auto;
     padding: 1.21rem 4.21rem;
     font-size: 1.07rem; }
+  .footer__coordinates {
+    font-family: 'Yeseva One', cursive;
+    text-align: center; }
+  .footer__adress {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    color: #E3B873;
+    font-size: 1.43rem;
+    line-height: 2rem;
+    text-transform: uppercase; }
+  .footer__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-right: 1rem;
+    margin-bottom: 3.14rem;
+    width: 28px;
+    height: 28px;
+    background-color: #E3B873;
+    border-radius: 50%; }
+  .footer__map {
+    margin: auto;
+    margin-bottom: 4.36rem;
+    max-width: 66.07rem;
+    min-height: 33.21rem; }
   .footer__menu {
-    padding: 4.29rem 0;
+    padding: 3.57rem 0;
     background-color: #131313; }
 
 .modal {
