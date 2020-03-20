@@ -139,14 +139,14 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minLength: 2
+        minlength: 2
       },
       userPhone: "required"
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minLength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов"
       },
       userPhone: "Заполните поле"
     },
@@ -158,23 +158,23 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minLength: 2
+        minlength: 2
       },
       userPhone: "required",
       userQuestion: {
         required: true,
-        minLength: 10
+        minlength: 10
       }
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minLength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов"
       },
       userPhone: "Заполните поле",
       userQuestion: {
         required: "Заполните поле",
-        minLength: "Длина поля должна быть не менее 10 символов"
+        minlength: "Длина поля должна быть не менее 10 символов"
       }
     },
     errorClass: "invalid",
@@ -185,7 +185,7 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minLength: 2
+        minlength: 2
       },
       userPhone: "required",
       userEmail: {
@@ -196,7 +196,7 @@ $(document).ready(() => {
     messages: {
       userName: {
         required: "Заполните поле",
-        minLength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов"
       },
       userPhone: "Заполните поле",
       userEmail: {
