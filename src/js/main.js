@@ -139,14 +139,16 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required"
     },
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов",
+        maxlength: "Длина поля должна быть не больше 15 символов"
       },
       userPhone: "Заполните поле"
     },
@@ -158,7 +160,8 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required",
       userQuestion: {
@@ -169,7 +172,8 @@ $(document).ready(() => {
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов",
+        maxlength: "Длина поля должна быть не больше 15 символов"
       },
       userPhone: "Заполните поле",
       userQuestion: {
@@ -185,7 +189,8 @@ $(document).ready(() => {
     rules: {
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required",
       userEmail: {
@@ -196,7 +201,8 @@ $(document).ready(() => {
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Длина поля должна быть не менее 2 символов"
+        minlength: "Длина поля должна быть не менее 2 символов",
+        maxlength: "Длина поля должна быть не больше 15 символов"
       },
       userPhone: "Заполните поле",
       userEmail: {

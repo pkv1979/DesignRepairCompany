@@ -1,17 +1,17 @@
 .design {
   position: relative;
-  padding-bottom: 0;
+  padding-bottom: 30rem;
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    right: 0;
-    width: 100%;
-    height: 45%;
-    background-color: $dark;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -1px;
+  //   right: 0;
+  //   width: 100%;
+  //   height: 45%;
+  //   background-color: $dark;
+  // }
 
   &__section-title {
     margin-bottom: 1.2rem;

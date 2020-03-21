@@ -800,16 +800,7 @@ img {
 
 .design {
   position: relative;
-  padding-bottom: 0; }
-  .design::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    right: 0;
-    width: 100%;
-    height: 45%;
-    background-color: #131313; }
+  padding-bottom: 30rem; }
   .design__section-title {
     margin-bottom: 1.2rem; }
   .design__subtitle {
