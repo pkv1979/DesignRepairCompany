@@ -837,7 +837,8 @@ img {
     margin-bottom: 3.57rem;
     padding: 2.5rem;
     max-width: 63.07rem;
-    background-color: #181818; }
+    background-color: #181818;
+    z-index: 3; }
   .footer__title {
     margin-bottom: 3.43rem;
     margin-top: 0;
