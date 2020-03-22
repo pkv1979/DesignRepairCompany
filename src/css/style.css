@@ -828,6 +828,9 @@ img {
 .footer {
   padding-top: 3rem;
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover; }
+  .footer .container {
+    display: flex;
+    flex-direction: column; }
   .footer__wrap {
     margin: auto;
     margin-top: -20rem;
@@ -890,8 +893,8 @@ img {
   .footer__map {
     margin: auto;
     margin-bottom: 4.36rem;
-    max-width: 66.07rem;
-    min-height: 33.21rem; }
+    min-height: 33.21rem;
+    width: 66.07rem; }
   .footer__menu {
     padding: 3.57rem 0;
     background-color: #131313; }
@@ -979,7 +982,11 @@ img {
     .design__subtitle {
       color: #ffffff; }
     .design__card {
-      margin-bottom: 5rem; } }
+      margin-bottom: 5rem; }
+  .footer__wrap {
+    z-index: 3; }
+  .footer__map {
+    width: 100%; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1000,7 +1007,9 @@ img {
   .hero__btn {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .footer__coordinates {
+    order: 2; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
