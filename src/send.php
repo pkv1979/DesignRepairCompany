@@ -43,8 +43,11 @@
         $mail->Body .= ", Его вопрос ${userQuestion}";
       }
 
-      $mail->send();
-      header('Location: thanks.html');
+      if ($mail->send()) {
+        echo "Ok";
+      } else {
+        echo "Письмо не отправлено. Есть ошибка: {$mail->ErrorInfo}";
+      }
   } catch (Exception $e) {
       echo "Письмо не отправлено. Есть ошибка: {$mail->ErrorInfo}";
   }

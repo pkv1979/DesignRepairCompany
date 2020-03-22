@@ -153,7 +153,18 @@ $(document).ready(() => {
       userPhone: "Заполните поле"
     },
     errorClass: "invalid",
-    errorElement: "div"
+    errorElement: "div",
+    submitHandler: (form) => {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: (response) => {
+          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+        }
+      });
+    }
   });
 
   $('.footer__form').validate({
@@ -182,7 +193,18 @@ $(document).ready(() => {
       }
     },
     errorClass: "invalid",
-    errorElement: "div"
+    errorElement: "div",
+    submitHandler: (form) => {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: (response) => {
+          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+        }
+      });
+    }
   });
 
   $('.modal__form').validate({
@@ -211,7 +233,19 @@ $(document).ready(() => {
       }
     },
     errorClass: "invalid",
-    errorElement: "div"
+    errorElement: "div",
+    submitHandler: (form) => {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: (response) => {
+          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    }
   });
 
   // Маска для номера телефона
