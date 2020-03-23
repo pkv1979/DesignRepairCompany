@@ -69,6 +69,8 @@ function buildImg(done) {
       // log: true
     }))
     .pipe(dest('./dist/img'));
+  src('./src/img/**/*.svg')
+    .pipe(dest('./dist/img'));
   done();
 }
 
