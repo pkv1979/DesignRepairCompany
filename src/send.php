@@ -19,7 +19,8 @@
 
   try {
       //Server settings
-      $mail->SMTPDebug = 0;                      // Enable verbose debug output
+      $mail->SMTPDebug = 0;                                       // Enable verbose debug output
+      $mail->CharSet = 'utf-8';                   
       $mail->isSMTP();                                            // Send using SMTP
       $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -51,5 +52,3 @@
   } catch (Exception $e) {
       echo "Письмо не отправлено. Есть ошибка: {$mail->ErrorInfo}";
   }
-
-?>
