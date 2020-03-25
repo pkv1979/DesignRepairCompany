@@ -31,6 +31,25 @@
       margin-left: 0;
     }
   }
+
+  .btn {
+    &:hover {
+      cursor: auto;
+    }
+
+    &--primary {
+      &:hover {
+        box-shadow: 0px 5px 15px rgba($primary, 0.2);
+      }
+    }
+
+    &--outline {
+      &:hover {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 760px) {

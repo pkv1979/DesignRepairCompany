@@ -6,6 +6,10 @@
   font-family: 'Futura Demi', sans-serif;
   font-size: 0.93rem;
 
+  &:disabled {
+    background-color: rgba($primary, 0.5);
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -25,6 +29,12 @@
     border: 1px solid $light;
     background-color: transparent;
     color: $light;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      background-color: $primary;
+      box-shadow: 0px 5px 15px rgba($primary, 0.2);
+    }
   }
 }
 

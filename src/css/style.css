@@ -325,6 +325,8 @@ template {
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
   font-size: 0.93rem; }
+  .btn:disabled {
+    background-color: rgba(227, 184, 115, 0.5); }
   .btn:hover {
     cursor: pointer; }
   .btn--primary {
@@ -337,7 +339,11 @@ template {
   .btn--outline {
     border: 1px solid #ffffff;
     background-color: transparent;
-    color: #ffffff; }
+    color: #ffffff;
+    transition: box-shadow 0.3s; }
+    .btn--outline:hover {
+      background-color: #E3B873;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
 
 .label {
   font-size: 1.07rem; }
@@ -508,8 +514,9 @@ img {
   justify-content: space-between;
   align-items: center; }
 
-.logo {
+.logo__item {
   font-size: 1rem;
+  text-decoration: none;
   color: #E3B873;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif; }
@@ -956,6 +963,61 @@ img {
     align-self: flex-end;
     padding: 19px 47px; }
 
+.thanks {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 199; }
+  .thanks--visible {
+    opacity: 1;
+    visibility: visible; }
+  .thanks__dialog {
+    position: relative;
+    max-width: 36.1rem;
+    padding: 2.3rem 3.5rem 1.928rem;
+    color: #ffffff;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center; }
+  .thanks__close {
+    position: absolute;
+    right: 0.86rem;
+    top: 0.71rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: transparent url("../img/close.svg") no-repeat center;
+    cursor: pointer; }
+  .thanks__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    line-height: 1.86rem;
+    text-align: center; }
+  .thanks__form {
+    display: flex;
+    flex-direction: column; }
+  .thanks__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.4rem; }
+    .thanks__input-group:last-of-type {
+      margin-bottom: 0; }
+  .thanks__policy {
+    margin-bottom: 2.7rem; }
+  .thanks__btn {
+    align-self: flex-end;
+    padding: 19px 47px; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 10px; }
@@ -971,7 +1033,14 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .btn:hover {
+    cursor: auto; }
+  .btn--primary:hover {
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
+  .btn--outline:hover {
+    background-color: transparent;
+    box-shadow: none; } }
 
 @media screen and (max-width: 760px) {
   .row {

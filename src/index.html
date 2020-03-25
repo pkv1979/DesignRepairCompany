@@ -4,16 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design Repair Company</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161828935-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161828935-1');
+  </script>
+
+
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
+        <div class="logo menu__logo wow fadeInLeft">
+          <a href="#main" class="logo__item">Repair Design Project</a>
+        </div>
         <!-- /.logo -->
         
         <nav class="nav menu__nav">
@@ -22,7 +36,7 @@
           <a href="#" class="nav__item">Замер</a>
           <a href="#" class="nav__item">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#contacts" class="nav__item">Контакты</a>
         </nav>
 
         <div class="contacts menu__contacts">
@@ -519,7 +533,7 @@
       </div>
       <!-- /.footer-wrap -->
 
-      <div class="footer__coordinates">
+      <div class="footer__coordinates" id="contacts">
         <p class="footer__adress">
           Ростов на дону, Торговый центр Plaza<br>
           Прямой телефон +7 (999) 768 32 99
@@ -533,8 +547,7 @@
       </div>
 
       <div class="map footer__map" id="map">
-        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aea5fe81d367733fb0113f68991b5d6e29f273101082d95a42079a0be73f390e3&amp;width=925&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.2811064972796!2d39.72190138278909!3d47.244708619639184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sua!4v1584704027880!5m2!1sru!2sua" width="925" height="465" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.2811064972796!2d39.72190138278909!3d47.244708619639184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sua!4v1584704027880!5m2!1sru!2sua" width="925" height="465" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy"></iframe>
       </div>
       <!-- /.map footer__map -->
     </div>
@@ -543,16 +556,18 @@
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
-          <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
+          <div class="logo menu__logo wow fadeInLeft">
+            <a href="#main" class="logo__item">Repair Design Project</a>
+          </div>
           <!-- /.logo -->
           
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">ПРоекты</a>
+            <a href="#main" class="nav__item">Главная</a>
+            <a href="#projects" class="nav__item">ПРоекты</a>
             <a href="#" class="nav__item">Замер</a>
             <a href="#" class="nav__item">Команда</a>
             <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
   
           <div class="contacts menu__contacts">
@@ -603,6 +618,16 @@
   </div>
   <!-- /.modal -->
 
+  <div class="thanks">
+    <div class="thanks__dialog">
+      <button class="thanks__close"></button>
+
+      <h3 class="thanks__title">Форма отправлена. Мы свяжемся с вами через 10 минут.</h3>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
   <div class="top">Наверх</div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -610,8 +635,6 @@
   <script src="./js/wow.min.js"></script>
   <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/jquery.mask.min.js"></script>
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=015c2386-37e7-4349-8ce1-dda207f05b20&lang=ru_RU" type="text/javascript"> 
-  </script>-->
   <script src="./js/main.js"></script>
 </body>
 </html>

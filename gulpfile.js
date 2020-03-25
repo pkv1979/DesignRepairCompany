@@ -85,4 +85,4 @@ function serveSass () {
 }
 
 exports.serve = bs;
-exports.build = series(buildCss, buildJs, buildHTML, buildPHP, buildFonts, buildImg);
+exports.build = series(buildCss, buildJs, buildHTML, buildPHP, buildFonts);

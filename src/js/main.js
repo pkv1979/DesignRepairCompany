@@ -3,6 +3,8 @@ $(document).ready(() => {
   const modal = $('.modal');
   const modalClose = $('.modal__close');
   const modalBtn = $('[data-toggle=modal');
+  const thanks = $('.thanks');
+  const thanksClose = $('.thanks__close');
 
   // Открытие модального окна.
   modalBtn.on('click', () => {
@@ -14,10 +16,15 @@ $(document).ready(() => {
     modal.removeClass('modal--visible');
   });
 
+  thanksClose.on('click', () =>{
+    thanks.removeClass('thanks--visible');
+  });
+
   // Закрытие модального окна при нажатии клавиши Esc (keyCode = 27).
   $(window).on('keydown', (e) => {
     if (e.keyCode === 27) {
       modal.removeClass('modal--visible');
+      thanks.removeClass('thanks--visible');
     }
   });
 
@@ -25,6 +32,15 @@ $(document).ready(() => {
   modal.on('click', (e) => {
     if ($(e.target).hasClass('modal--visible')) {
       modal.removeClass('modal--visible');
+    }
+    if ($(e.target).hasClass('thanks--visible')) {
+      thanks.removeClass('thanks--visible');
+    }
+  });
+
+  thanks.on('click', (e) => {
+    if ($(e.target).hasClass('thanks--visible')) {
+      thanks.removeClass('thanks--visible');
     }
   });
 
@@ -51,6 +67,13 @@ $(document).ready(() => {
       scrollTop: 0
     }, delay);
   });
+
+  // плавное перемещение страницы к нужному блоку
+	$(".nav__item, .logo__item").click(function () {
+		let elementClick = $(this).attr("href");
+		let destination = $(elementClick).offset().top;
+		$("body,html").animate({scrollTop: destination }, 1000);
+	});
 
   //initialize swiper when document ready
   const projectsSwiper = new Swiper ('.projects__swiper-container', {
@@ -127,11 +150,26 @@ $(document).ready(() => {
         url: "send.php",
         data: $(form).serialize(),
         success: (response) => {
-          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
+          thanks.addClass('thanks--visible');
         }
       });
     }
+  });
+
+  $('#control-policy-checkbox').on('change', () => {
+    if ($('.control__btn').attr('disabled') != 'disabled') {
+      $('.control__btn').attr('disabled', true);
+    } else {
+      $('.control__btn').removeAttr('disabled');
+    }
+  });
+
+  $('.control__form').on('submit', () => {
+    gtag('event', 'ring-click', {
+      'event_category': 'ring',
+      'event_label': 'Обратный звонок'
+    });
   });
 
   $('.footer__form').validate({
@@ -167,11 +205,26 @@ $(document).ready(() => {
         url: "send.php",
         data: $(form).serialize(),
         success: (response) => {
-          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
+          thanks.addClass('thanks--visible');
         }
       });
     }
+  });
+
+  $('#footer-policy-checkbox').on('change', () => {
+    if ($('.footer__btn').attr('disabled') != 'disabled') {
+      $('.footer__btn').attr('disabled', true);
+    } else {
+      $('.footer__btn').removeAttr('disabled');
+    }
+  });
+
+  $('.footer__form').on('submit', () => {
+    gtag('event', 'ring-click', {
+      'event_category': 'ring',
+      'event_label': 'Обратный звонок'
+    });
   });
 
   $('.modal__form').validate({
@@ -207,12 +260,27 @@ $(document).ready(() => {
         url: "send.php",
         data: $(form).serialize(),
         success: (response) => {
-          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
           $(form)[0].reset();
           modal.removeClass('modal--visible');
+          thanks.addClass('thanks--visible');
         }
       });
     }
+  });
+
+  $('#modal-policy-checkbox').on('change', () => {
+    if ($('.modal__btn').attr('disabled') != 'disabled') {
+      $('.modal__btn').attr('disabled', true);
+    } else {
+      $('.modal__btn').removeAttr('disabled');
+    }
+  });
+
+  $('.modal__form').on('submit', () => {
+    gtag('event', 'click', {
+      'event_category': 'button',
+      'event_label': 'Заявки'
+    });
   });
 
   // Маска для номера телефона
