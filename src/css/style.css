@@ -402,6 +402,9 @@ template {
   cursor: pointer; }
 
 div.invalid {
+  position: absolute;
+  left: 25px;
+  bottom: -16px;
   color: tomato; }
 
 .container {
@@ -746,6 +749,7 @@ img {
 .control__input {
   color: #131313; }
   .control__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 30%; }
@@ -864,6 +868,7 @@ img {
   .footer__input {
     padding-top: 0.1rem; }
     .footer__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-basis: 45%;
@@ -952,10 +957,11 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 3.4rem; }
-    .modal__input-group:last-of-type {
+    .modal__input-group--last {
       margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.7rem; }

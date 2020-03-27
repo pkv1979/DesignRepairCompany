@@ -111,6 +111,9 @@
 
 div {
   &.invalid {
+    position: absolute;
+    left: 25px;
+    bottom: -16px;
     color: tomato;
   }
 }

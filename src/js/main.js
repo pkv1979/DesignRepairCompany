@@ -165,7 +165,7 @@ $(document).ready(() => {
     }
   });
 
-  $('.control__form').on('submit', () => {
+  $('.control__btn').on('click', () => {
     gtag('event', 'ring-click', {
       'event_category': 'ring',
       'event_label': 'Обратный звонок'
@@ -220,7 +220,7 @@ $(document).ready(() => {
     }
   });
 
-  $('.footer__form').on('submit', () => {
+  $('.footer__btn').on('click', () => {
     gtag('event', 'ring-click', {
       'event_category': 'ring',
       'event_label': 'Обратный звонок'
@@ -276,7 +276,7 @@ $(document).ready(() => {
     }
   });
 
-  $('.modal__form').on('submit', () => {
+  $('.modal__btn').on('click', () => {
     gtag('event', 'click', {
       'event_category': 'button',
       'event_label': 'Заявки'
@@ -284,7 +284,7 @@ $(document).ready(() => {
   });
 
   // Маска для номера телефона
-  $('[type=tel]').mask('+7(000) 00-00-000', /*{ placeholder: "+7(___) __-__-___" }*/);
+  $('[type=tel]').mask('+7(000) 000-00-00'/*, { placeholder: "+7(___) __-__-___" }*/);
 
   // Карта
   // Функция ymaps.ready() будет вызвана, когда
