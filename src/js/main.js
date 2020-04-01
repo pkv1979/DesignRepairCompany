@@ -288,16 +288,22 @@ $(document).ready(() => {
 
   let player;
 
-  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  $('.video__play').on('click', () => {
     player = new YT.Player('player', {
-      height: '465',
+      height: '434',
       width: '100%',
-      videoId: 'M7lc1UVf-VE',
+      videoId: '_aB6y1OdN0s',
       events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+        'onReady': videoPlay
       }
     });
   });
+
+  videoPlay = (e) => {
+    e.target.playVideo();
+  };
+
+  // Карта Google maps
+  lazyframe('.lazyframe');
 
 });

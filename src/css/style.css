@@ -907,8 +907,8 @@ img {
   .footer__map {
     margin: auto;
     margin-bottom: 4.36rem;
-    min-height: 33.21rem;
-    width: 66.07rem; }
+    width: 66.07rem;
+    height: 33.21rem; }
   .footer__menu {
     padding: 3.57rem 0;
     background-color: #131313; }
