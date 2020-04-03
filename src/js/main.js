@@ -304,6 +304,43 @@ $(document).ready(() => {
   };
 
   // Карта Google maps
-  lazyframe('.lazyframe');
+  function google_maps_init() {
+    var roemerberg = {lat: 47.244844, lng: 39.723158}
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: roemerberg
+    });
+    var marker = new google.maps.Marker({
+      position: roemerberg,
+      map: map
+    });
+  }
+  
+  function google_maps_lazyload(api_key) {
+    if (api_key) {
+      var options = {
+        rootMargin: '400px',
+        threshold: 0
+      };
+  
+      var map = document.getElementById('map');
+  
+      var observer = new IntersectionObserver(
+        function(entries, observer) {
+          // Detect intersection https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
+          var isIntersecting = typeof entries[0].isIntersecting === 'boolean' ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
+          if (isIntersecting) {
+            loadJS('https://maps.googleapis.com/maps/api/js?callback=google_maps_init&key=' + api_key );
+            observer.unobserve(map);
+          }
+        },
+        options
+      );
+  
+      observer.observe(map);
+    }
+  }
+  
+  google_maps_lazyload("AIzaSyChw2g8BpmWoUvOZLdYCxn2kN8vCl8MmeI");
 
 });
