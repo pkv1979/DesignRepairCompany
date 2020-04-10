@@ -9,12 +9,12 @@
     }
   }
 
-  .footer {
-    &__map iframe{
-      margin: auto;
-      max-width: 100%;
-    }
-  }
+  // .footer {
+  //   &__map {
+  //     margin: auto;
+  //     max-width: 100%;
+  //   }
+  // }
 }
 
 @media screen and (max-width: 992px) {
@@ -72,7 +72,10 @@
 
   .design {
     background-color: $bacground;
-    color: $light;
+
+    .section-title__heading {
+      color: $light;
+    }
 
     &__subtitle {
       color: $light;
@@ -107,33 +110,180 @@
   }
 
   .title {
-    font-size: 1.64rem;
+    font-size: 2.3rem;
   }
 
   .hero {
     &__scroll-down {
       display: none;
     }
-
-    &__content {
-      max-width: 22.86rem;
+    
+    &__title {
+      max-width: 26.5rem;
     }
 
     &__text {
-      font-size: 1.29rem;
+      font-size: 1.8rem;
       margin-bottom: 2.28rem;
     }
 
     &__btn {
       display: block;
-      min-width: 22.86rem;
+      // min-width: 22.86rem;
+      width: 100%;
       margin-bottom: 1.85rem;
+      font-size: 1.3rem;
     }
   }
 
+  .row {
+    align-items: flex-start;
+  }
+
+  .col {
+    &-30 {
+      width: 100%;
+    }
+
+    &-45 {
+      width: 100%;
+      margin-bottom: 3.6rem;
+    }
+
+    &-55 {
+      margin: auto;
+    }
+  }
+
+  .section {
+    &-title {
+      &__heading {
+        font-size: 2.2rem;
+      }
+
+      &__text {
+        max-width: 30.5rem;
+        font-size: 1.4rem;
+      }
+      
+      &__word {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .swiper {
+    &-slide {
+      &__text {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .input {
+    &-group {
+      margin-bottom: 6.3rem;
+
+      &--last {
+        margin-bottom: 2.65rem;
+      }
+    }
+
+    &::placeholder {
+      font-size: 1.8rem;
+      color: $light;
+    }
+  }
+
+  .label {
+    margin-bottom: 6px;
+    font-size: 1.5rem;
+    color: rgba($light, 0.5);
+  }
+
+  .policy {
+    margin-bottom: 6.24rem;
+
+    &__label {
+      justify-content: flex-start;
+      font-size: 1.6rem;
+    }
+  }
+
+  .control {
+    position: relative;
+    padding-bottom: 30.6rem;
+    background-color: $dark;
+    color: $light;
+
+    &__form {
+      position: absolute;
+      bottom: -3rem;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    &__policy {
+      margin-bottom: 6.24rem;
+
+      &-label {
+        justify-content: flex-start;
+        font-size: 1.6rem;
+      }
+    }
+
+    &__btn {
+      order: 1;
+      padding: 2rem 12.4rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .design {
+    background-color: $dark;
+  }
+
+  .types {
+    padding-top: 8.3rem;
+  }
+
   .footer {
+    background: $dark;
+
+    &__wrap {
+      margin: 0;
+      margin-bottom: 4.6rem;
+      padding: 0;
+      background-color: $dark;
+    }
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__btn {
+      width: 100%;
+      padding: 2rem 12.4rem;
+      font-size: 1.5rem;
+    }
+
     &__coordinates {
       order: 2;
+    }
+
+    &__adress {
+      font-size: 1.8rem;
+    }
+
+    &__link {
+      width: 39px;
+      height: 39px;
+    }
+
+    &__menu {
+      display: none;
     }
   }
 }

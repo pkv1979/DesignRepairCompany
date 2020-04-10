@@ -234,7 +234,7 @@
             <input type="text" class="input form__input control__input" name="userName" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           
-          <div class="control__input-group">
+          <div class="control__input-group input-group--last">
             <label for="control-user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" class="input form__input control__input" name="userPhone" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
@@ -519,7 +519,7 @@
             <input type="tel" class="input form__input footer__input input--light" name="userPhone" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
   
-          <div class="input-group footer__input-group footer__input-group--full-width">
+          <div class="input-group footer__input-group footer__input-group--full-width input-group--last">
             <label for="footer-user-question" class="label form__label label--light">Вопрос</label>
             <input type="text" class="input form__input footer__input input--light" name="userQuestion" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
@@ -640,5 +640,45 @@
   <script src="./js/loadJS.js"></script>
   <script src="./js/intersection-observer.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    function google_maps_init() {
+      var roemerberg = {lat: 47.244844, lng: 39.723158}
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: roemerberg
+      });
+      var marker = new google.maps.Marker({
+        position: roemerberg,
+        map: map
+      });
+    }
+    
+    function google_maps_lazyload(api_key) {
+      if (api_key) {
+        var options = {
+          rootMargin: '400px',
+          threshold: 0
+        };
+    
+        var map = document.getElementById('map');
+    
+        var observer = new IntersectionObserver(
+          function(entries, observer) {
+            // Detect intersection https://calendar.perfplanet.com/2017/progressive-image-loading-using-intersection-observer-and-sqip/#comment-102838
+            var isIntersecting = typeof entries[0].isIntersecting === 'boolean' ? entries[0].isIntersecting : entries[0].intersectionRatio > 0;
+            if (isIntersecting) {
+              loadJS('https://maps.googleapis.com/maps/api/js?callback=google_maps_init&key=' + api_key );
+              observer.unobserve(map);
+            }
+          },
+          options
+        );
+    
+        observer.observe(map);
+      }
+    }
+    
+    google_maps_lazyload("AIzaSyChw2g8BpmWoUvOZLdYCxn2kN8vCl8MmeI");
+  </script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     margin: auto;
     margin-top: -20rem;
     margin-bottom: 3.57rem;
-    padding: 2.5rem;
+    padding: 2.5rem 12.96rem;
     max-width: 63.07rem;
     background-color: $black;
     z-index: 3;
@@ -97,6 +97,10 @@
     // min-height: 33.21rem;
     width: 66.07rem;
     height: 33.21rem;
+
+    div {
+      width: 100%;
+    }
   }
 
   &__menu {
